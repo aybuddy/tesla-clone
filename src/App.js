@@ -8,7 +8,6 @@ function App() {
     <div className='App'>
       {/* <Header /> */}
       <Home />
-      <h1>Tesla Clone</h1>
     </div>
   );
 }
