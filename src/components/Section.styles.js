@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import { modelS } from '../data/data';
 import { FaChevronDown } from 'react-icons/fa';
 
 export const Wrap = styled.div`
@@ -8,7 +7,7 @@ export const Wrap = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/676da95d-942e-414c-8534-f1832f0d4ced/bvlatuR/std/3296x1798/ms-homepage-desktop');
+  background-image: ${(props) => `url(${props.bgImg})`};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,6 +22,10 @@ export const ItemText = styled.div`
 export const ButtonGroup = styled.div`
   display: flex;
   margin-bottom: 30px;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftButton = styled.div`
@@ -41,7 +44,16 @@ export const LeftButton = styled.div`
   margin: 8px;
 `;
 
-export const RightButton = styled(LeftButton)``;
+export const RightButton = styled(LeftButton)`
+  background-color: #fff;
+  opacity: 0.65;
+  color: #393c41;
+`;
+
+export const SoloButton = styled(LeftButton)`
+  background-color: rgb(23, 25, 32);
+  opacity: 1;
+`;
 
 export const DownArrow = styled.div`
   text-align: center;

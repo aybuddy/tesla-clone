@@ -6,23 +6,30 @@ import {
   ItemText,
   LeftButton,
   RightButton,
+  SoloButton,
   Wrap,
 } from './Section.styles';
-// import { modelS } from '../data/data';
 import { FaChevronDown } from 'react-icons/fa';
 
-const Section = () => {
+const Section = ({ heading, description, leftBtn, rightBtn, bgImg }) => {
   return (
-    <Wrap>
+    <Wrap bgImg={bgImg}>
       <ItemText>
-        <h1>Model S</h1>
-        <p>Order Online for Touchless Delivery</p>
+        <h1>{heading}</h1>
+        <p>{description}</p>
       </ItemText>
       <Buttons>
-        <ButtonGroup>
-          <LeftButton>Custom Order</LeftButton>
-          <RightButton>Existing Inventory</RightButton>
-        </ButtonGroup>
+        {!rightBtn ? (
+          <SoloButton>{leftBtn}</SoloButton>
+        ) : (
+          <>
+            <ButtonGroup>
+              <LeftButton>{leftBtn}</LeftButton>
+              <RightButton>{rightBtn}</RightButton>
+            </ButtonGroup>
+          </>
+        )}
+
         <DownArrow>
           <FaChevronDown />
         </DownArrow>
