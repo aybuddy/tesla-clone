@@ -12,8 +12,7 @@ const GlobalStyle = createGlobalStyle`
   --p: 1.6rem;
 
   // Fonts
-  /* --serif: Georgia, serif; */
-  /* --sans-serif: Arial, sans-serif; */
+  --sans-serif: 'Gotham', Arial, sans-serif;
 }
 
 html {
@@ -33,10 +32,10 @@ html {
 body {
   line-height: 1.2;
   overflow-x: hidden;
-  /* font-family: var(--sans-serif); */
+  font-family: var(--sans-serif);
   font-weight: 400;
-  /* background-color: var(--black); */
   font-size: 1.6rem;
+  color: #393c41;
 }
 
 ul {
@@ -59,7 +58,6 @@ a:link {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: var(--serif); */
   letter-spacing: 2px;
 }
 
@@ -83,10 +81,8 @@ h6 {
 }
 
 p, li {
-  letter-spacing: 1px;
-  /* font-family: var(--sans-serif); */
+  letter-spacing: -0.5px;
 }
-
 
 `;
 

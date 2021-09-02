@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { FaChevronDown } from 'react-icons/fa';
 
 export const Wrap = styled.div`
   width: 100vw;
@@ -17,6 +16,15 @@ export const Wrap = styled.div`
 export const ItemText = styled.div`
   padding-top: 15vh;
   text-align: center;
+
+  h1 {
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+  p {
+    font-weight: 400;
+  }
 `;
 
 export const ButtonGroup = styled.div`
